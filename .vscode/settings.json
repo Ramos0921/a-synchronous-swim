@@ -9,5 +9,7 @@
   "files.trimTrailingWhitespace": true,
   "javascript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true
 }

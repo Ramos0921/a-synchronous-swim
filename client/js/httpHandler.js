@@ -4,8 +4,35 @@
 
   //
   // TODO: build the swim command fetcher here
+  const getInfo = () => {
+    $.ajax({
+      method: 'GET',
+      url: serverUrl + '/random',
+      success: (data) => {
+        // reload the page
+        //console.log(data);
+        SwimTeam.move(data);
+        //window.location = window.location.href;
+      }
+    });
+  };
+  //setInterval(getInfo, 10000)
+//getInfo();
   //
+  const getBackground = () => {
+    $.ajax({
+      method: 'GET',
+      url: serverUrl + '/background',
+      success: (data) => {
+        // reload the page
+        //console.log(data);
+        //if successful, loads the background image on the page
+        //window.location = window.location.href;
+      }
+    });
+  };
 
+  getBackground()
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
@@ -15,9 +42,9 @@
     var formData = new FormData();
     formData.append('file', file);
     $.ajax({
-      type: 'POST',
+      method: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl + '/background.jpg',
       cache: false,
       contentType: false,
       processData: false,
