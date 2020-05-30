@@ -16,23 +16,8 @@
       }
     });
   };
-  //setInterval(getInfo, 10000)
-//getInfo();
-  //
-  const getBackground = () => {
-    $.ajax({
-      method: 'GET',
-      url: serverUrl + '/background',
-      success: (data) => {
-        // reload the page
-        //console.log(data);
-        //if successful, loads the background image on the page
-        //window.location = window.location.href;
-      }
-    });
-  };
+//setInterval(getInfo, 1000)
 
-  getBackground()
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!
   // Note: remember to fix the URL below.
